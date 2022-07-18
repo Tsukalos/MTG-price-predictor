@@ -1,8 +1,8 @@
 ### Project specific
-.csv
-.png
-.jpeg
-.jpg
+*.csv
+*.png
+*.jpeg
+*.jpg
 
 ### default github python .gitignore
 # Byte-compiled / optimized / DLL files
