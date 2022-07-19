@@ -8,7 +8,7 @@ fields_to_extract = [
     'border_color', 'finishes', 'full_art',
     'promo', 'rarity', 'story_spotlight'
 ]
-data = scrapper.get_all_pages('date>2003-07-28 date<2021-07-16 in:paper (f:standard or f:pioneer or f:modern' +
+data = scrapper.Scryfall.get_all_pages('date>2003-07-28 date<2021-07-16 in:paper (f:standard or f:pioneer or f:modern' +
                               'or f:legacy or f:vintage or f:commander or f:explorer or f:brawl) (not:reprint or is:reprint)')
 
 cards = []

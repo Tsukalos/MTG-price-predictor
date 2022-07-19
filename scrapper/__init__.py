@@ -1,2 +1,2 @@
-from scry import get_all_pages
+from scry import Scryfall
 from tcgphistory import TCGPhistory as TCGpricing
