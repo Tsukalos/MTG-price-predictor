@@ -1,6 +1,7 @@
 import scrython
 import time
 import tqdm
+from scrython.catalog import KeywordAbilities, KeywordActions, AbilityWords
 
 
 class Scryfall:
@@ -23,3 +24,15 @@ class Scryfall:
                 break
         pbar.close()
         return all_data
+
+    @staticmethod
+    def get_all_keywords():
+
+        cl = [KeywordAbilities, KeywordActions, AbilityWords]
+        all_data = []
+        for c in cl:
+            time.sleep(0.2)
+            all_data += c().data()
+
+        return all_data
+

@@ -14,6 +14,9 @@ class TCGPhistory(object):
         if not response:
             raise HTTPError(response.status_code)
         parsed = json.loads(response.text)
+        # Checks if there is market history from that card
+        if (not parsed['result']) or (not parsed['count'] > 0):
+            return []
         parsed = parsed['result'][offset:][::-1]
         history = []
         history_count = len(parsed)
